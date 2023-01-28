@@ -98,3 +98,23 @@ ___
 (교훈) 그래서 많은 위젯들이 사용해야하는 중요한 state는 최대한 위에 보관해주는게 좋습니다.
 
 중요한 것들은 그냥 MyApp 이런데 넣으면 됩니다. 
+
+___
+
+## 사용자의 input을 받는 법
+
+유저가 TextField()에 입력한 내용을 가져오고 싶다면 ??
+
+```dart
+class DialogUI extends StatelessWidget {
+  DialogUI({Key? key, this.addOne }) : super(key: key);
+  final addOne;
+  var inputData = TextEditingController();
+```
+TextField() 위젯에 controller: 파라미터가 있습니다.
+
+```dart
+TextField(
+  controller: inputData,
+), 
+```
